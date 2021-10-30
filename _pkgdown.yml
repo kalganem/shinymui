@@ -1,0 +1,21 @@
+url: https://kalganem.github.io/shinymui/index.html
+
+template:
+  params:
+    bootswatch: simplex
+    footer: shinymui is dveloped by Khaled Alganem
+
+
+development:
+  mode: auto
+
+figure:
+  fig.width: 12
+  fig.height: 12
+
+
+navbar:
+  components:
+     github:
+       icon: "fab fa-github"
+       href: https://github.com/kalganem/shinymui
