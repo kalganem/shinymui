@@ -4,7 +4,9 @@
 .httr-oauth
 .DS_Store
 .Renviron
-
+*.swp
+node_modules
+app.R
 
 /*_cache/
 /cache/
@@ -22,3 +24,4 @@
 /*.Rcheck/
 
 
+node_modules
