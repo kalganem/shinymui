@@ -11,7 +11,7 @@ mui_checkboxInput <- function(inputId, default = F) {
     inputId,
     "mui_checkbox",
     htmltools::htmlDependency(
-      name = "mui_checkbox-input",
+      name = "shinymui",
       version = "1.0.0",
       src = "www/shinymui/shinymui",
       package = "shinymui",

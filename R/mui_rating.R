@@ -11,7 +11,7 @@ mui_ratingInput <- function(inputId, default = 3) {
     inputId,
     "mui_rating",
     htmltools::htmlDependency(
-      name = "mui_rating-input",
+      name = "shinymui",
       version = "1.0.0",
       src = "www/shinymui/shinymui",
       package = "shinymui",
