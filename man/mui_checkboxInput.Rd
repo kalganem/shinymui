@@ -2,10 +2,10 @@
 % Please edit documentation in R/mui_checkbox.R
 \name{mui_checkboxInput}
 \alias{mui_checkboxInput}
-\title{<Add Title>}
+\title{MUI Checkbox Input}
 \usage{
-mui_checkboxInput(inputId, default = "")
+mui_checkboxInput(inputId, default = F)
 }
 \description{
-<Add Description>
+UI Shiny Input for a Checkbox
 }

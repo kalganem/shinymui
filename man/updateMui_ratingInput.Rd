@@ -2,10 +2,10 @@
 % Please edit documentation in R/mui_rating.R
 \name{updateMui_ratingInput}
 \alias{updateMui_ratingInput}
-\title{<Add Title>}
+\title{MUI Rating Updated Input}
 \usage{
 updateMui_ratingInput(session, inputId, value, configuration = NULL)
 }
 \description{
-<Add Description>
+Updating UI Shiny Input for Rating
 }

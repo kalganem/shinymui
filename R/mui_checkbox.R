@@ -1,6 +1,6 @@
-#' <Add Title>
+#' MUI Checkbox Input
 #'
-#' <Add Description>
+#' UI Shiny Input for a Checkbox
 #'
 #' @importFrom reactR createReactShinyInput
 #' @importFrom htmltools htmlDependency tags
@@ -23,9 +23,9 @@ mui_checkboxInput <- function(inputId, default = F) {
   )
 }
 
-#' <Add Title>
+#' MUI Rating Updated Input
 #'
-#' <Add Description>
+#' Updating UI Shiny Input for Checkbox
 #'
 #' @export
 updateMui_checkboxInput <- function(session, inputId, value, configuration = NULL) {

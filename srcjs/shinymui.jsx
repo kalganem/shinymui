@@ -8,6 +8,12 @@ const RatingUI = ({ configuration, value, setValue }) => {
   return (
       <Rating
         value={value}
+        size={configuration.size}
+        max={configuration.max}
+        disabled={configuration.disabled}
+        highlightSelectedOnly={configuration.highlightSelectedOnly}
+        precision={configuration.precision}
+        readOnly={configuration.readOnly}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}

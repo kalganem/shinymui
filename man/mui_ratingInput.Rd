@@ -2,10 +2,42 @@
 % Please edit documentation in R/mui_rating.R
 \name{mui_ratingInput}
 \alias{mui_ratingInput}
-\title{<Add Title>}
+\title{MUI Rating Input}
 \usage{
-mui_ratingInput(inputId, default = "")
+mui_ratingInput(
+  inputId,
+  default = NULL,
+  size = "small",
+  max = 5,
+  disabled = FALSE,
+  highlightSelectedOnly = FALSE,
+  precision = 1,
+  readOnly = FALSE
+)
+}
+\arguments{
+\item{inputId}{Input id}
+
+\item{default}{Default value}
+
+\item{size}{Size of icons c("small", "medium", "large")}
+
+\item{max}{Maximum rating}
+
+\item{disabled}{If true, the component is disabled}
+
+\item{highlightSelectedOnly}{If true, only the selected icon will be highlighted}
+
+\item{precision}{The minimum increment value change allowed}
+
+\item{readOnly}{Removes all hover effects and pointer events}
 }
 \description{
-<Add Description>
+UI Shiny Input for Rating
+}
+\examples{
+
+mui_ratingInput("rating_1", size = "medium", max = 10, precision = 0.5)
+
+
 }
