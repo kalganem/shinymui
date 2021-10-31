@@ -1,19 +1,14 @@
 import { reactShinyInput } from 'reactR';
 import * as React from 'react';
 import Rating from '@mui/material/Rating';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
 
 const RatingUI = ({ configuration, value, setValue }) => {
   return (
       <Rating
         value={value}
-        size={configuration.size}
-        max={configuration.max}
-        disabled={configuration.disabled}
-        highlightSelectedOnly={configuration.highlightSelectedOnly}
-        precision={configuration.precision}
-        readOnly={configuration.readOnly}
+        {...configuration}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
@@ -23,15 +18,18 @@ const RatingUI = ({ configuration, value, setValue }) => {
 
 reactShinyInput('.mui_rating', 'shinymui.shinymui', RatingUI);
 
-
 const CheckboxUI = ({ configuration, value, setValue }) => {
   return (
-      <Checkbox
+
+  <FormControlLabel control={
+  <Checkbox
         value={value}
+        {...configuration}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
       />
+  } label={configuration.label} labelPlacement={configuration.labelPlacement} />
   );
 };
 

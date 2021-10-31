@@ -2,10 +2,48 @@
 % Please edit documentation in R/mui_checkbox.R
 \name{mui_checkboxInput}
 \alias{mui_checkboxInput}
-\title{MUI Checkbox Input}
+\title{Checkbox Input}
 \usage{
-mui_checkboxInput(inputId, default = F)
+mui_checkboxInput(
+  inputId,
+  checked = F,
+  label = "",
+  labelPlacement = "end",
+  disabled = F,
+  disableRipple = F,
+  color = "primary",
+  size = "medium",
+  ...
+)
+}
+\arguments{
+\item{inputId}{Input id}
+
+\item{checked}{If true, the component is checked.}
+
+\item{label}{Label text}
+
+\item{labelPlacement}{Label text placement c("end", "start", "top", "bottom")}
+
+\item{disabled}{If true, the component is disabled}
+
+\item{disableRipple}{If true, the ripple effect is disabled.}
+
+\item{color}{The color of the component c('primary', 'secondary','error','info', 'success', 'warning')}
+
+\item{size}{Size of icons c("small", "medium")}
+
+\item{...}{Other arguments/props}
 }
 \description{
 UI Shiny Input for a Checkbox
+}
+\examples{
+
+mui_checkboxInput("checkbox_1", checked = TRUE, label = "Choice A",
+                    color = "success", size = "medium")
+
+}
+\seealso{
+\href{https://mui.com/api/checkbox/}{Additional arguments/props}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/mui_rating.R
 \name{mui_ratingInput}
 \alias{mui_ratingInput}
-\title{MUI Rating Input}
+\title{Rating Input}
 \usage{
 mui_ratingInput(
   inputId,
@@ -12,7 +12,8 @@ mui_ratingInput(
   disabled = FALSE,
   highlightSelectedOnly = FALSE,
   precision = 1,
-  readOnly = FALSE
+  readOnly = FALSE,
+  ...
 )
 }
 \arguments{
@@ -31,13 +32,17 @@ mui_ratingInput(
 \item{precision}{The minimum increment value change allowed}
 
 \item{readOnly}{Removes all hover effects and pointer events}
+
+\item{...}{Other arguments/props}
 }
 \description{
 UI Shiny Input for Rating
 }
 \examples{
 
-mui_ratingInput("rating_1", size = "medium", max = 10, precision = 0.5)
+mui_ratingInput("rating_1", size = "medium", max = 5, precision = 0.5)
 
-
+}
+\seealso{
+\href{https://mui.com/api/rating/}{Additional arguments/props}
 }

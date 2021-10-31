@@ -2,9 +2,18 @@
 % Please edit documentation in R/mui_checkbox.R
 \name{updateMui_checkboxInput}
 \alias{updateMui_checkboxInput}
-\title{MUI Rating Updated Input}
+\title{Checkbox Update Input}
 \usage{
 updateMui_checkboxInput(session, inputId, value, configuration = NULL)
+}
+\arguments{
+\item{session}{Shiny session}
+
+\item{inputId}{Input id}
+
+\item{value}{Input value}
+
+\item{configuration}{Other arguments/props}
 }
 \description{
 Updating UI Shiny Input for Checkbox
