@@ -12,3 +12,4 @@
 ^webpack\.config\.js$
 ^yarn\.lock$
 ^rsconnect$
+^\.github$
