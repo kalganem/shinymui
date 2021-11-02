@@ -2,8 +2,11 @@
 
 export(mui_checkboxInput)
 export(mui_ratingInput)
+export(mui_skeleton)
+export(mui_transferList)
 export(updateMui_checkboxInput)
 export(updateMui_ratingInput)
+export(updateMui_transferList)
 importFrom(htmltools,htmlDependency)
 importFrom(htmltools,tags)
 importFrom(reactR,createReactShinyInput)

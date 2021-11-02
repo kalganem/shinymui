@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • shinymui</title>
+<title>Transfer List UI — mui_transferList • shinymui</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Transfer List UI — mui_transferList" />
+<meta property="og:description" content="UI Shiny Transfer List" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,78 +106,79 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Transfer List UI</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kalganem/shinymui/blob/master/R/mui_transferlist.R'><code>R/mui_transferlist.R</code></a></small>
+    <div class="hidden name"><code>mui_transferList.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>UI Shiny Transfer List</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>mui_transferList</span><span class='op'>(</span>
+  <span class='va'>inputId</span>,
+  default <span class='op'>=</span> <span class='cn'>NULL</span>,
+  left_list <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"C"</span><span class='op'>)</span>,
+  right_list <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"D"</span>, <span class='st'>"E"</span>, <span class='st'>"F"</span><span class='op'>)</span>,
+  left_title <span class='op'>=</span> <span class='st'>"Choices"</span>,
+  right_title <span class='op'>=</span> <span class='st'>"Chosen"</span>,
+  direction <span class='op'>=</span> <span class='st'>"row"</span>,
+  justifyContent <span class='op'>=</span> <span class='st'>"center"</span>
+<span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="mui_checkboxInput.html">mui_checkboxInput()</a></code> </p>
-        </td>
-        <td><p>Checkbox Input</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mui_ratingInput.html">mui_ratingInput()</a></code> </p>
-        </td>
-        <td><p>Rating Input</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mui_skeleton.html">mui_skeleton()</a></code> </p>
-        </td>
-        <td><p>Rating Input</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mui_transferList.html">mui_transferList()</a></code> </p>
-        </td>
-        <td><p>Transfer List UI</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="updateMui_checkboxInput.html">updateMui_checkboxInput()</a></code> </p>
-        </td>
-        <td><p>Checkbox Update Input</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="updateMui_ratingInput.html">updateMui_ratingInput()</a></code> </p>
-        </td>
-        <td><p>Rating Update Input</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="updateMui_transferList.html">updateMui_transferList()</a></code> </p>
-        </td>
-        <td><p>Transfer List</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>inputId</th>
+      <td><p>Input id</p></td>
+    </tr>
+    <tr>
+      <th>default</th>
+      <td><p>Default value (will be the list on the right by default)</p></td>
+    </tr>
+    <tr>
+      <th>left_list</th>
+      <td><p>Values of the list on the left (vector or list) (must be initialized with at least two values)</p></td>
+    </tr>
+    <tr>
+      <th>right_list</th>
+      <td><p>Values of the list on the right (vector or list) (must be initialized with at least two values)</p></td>
+    </tr>
+    <tr>
+      <th>left_title</th>
+      <td><p>The title of the list on the left (default  = "Choices")</p></td>
+    </tr>
+    <tr>
+      <th>right_title</th>
+      <td><p>The title of the list on the right (default = "Chosen")</p></td>
+    </tr>
+    <tr>
+      <th>direction</th>
+      <td><p>The layout of the lists c("row", "column"). Default = "row"</p></td>
+    </tr>
+    <tr>
+      <th>justifyContent</th>
+      <td><p>justifyContent prop passed to the main grid. options: flex-start, center, flex-end, space-between, space-around, space-evenly</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><a href='https://mui.com/api/transfer-list/'>Additional arguments/props</a></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='fu'>mui_transferList</span><span class='op'>(</span><span class='st'>"transferList_1"</span>, left_list <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>,
+right_list <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; &lt;span id="transferList_1" class="mui_transferlist"&gt;&lt;/span&gt;
+#&gt; &lt;script id="transferList_1_value" type="application/json"&gt;["Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species"]&lt;/script&gt;
+#&gt; &lt;script id="transferList_1_configuration" type="application/json"&gt;{"left_list":["mpg","cyl","disp","hp","drat","wt","qsec","vs","am","gear","carb"],"right_list":["Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species"],"left_title":"Choices","right_title":"Chosen","direction":"row","justifyContent":"center"}&lt;/script&gt;</div><div class='input'>
+
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

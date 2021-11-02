@@ -1,36 +1,11 @@
-import { reactShinyInput } from 'reactR';
 import * as React from 'react';
-import Rating from '@mui/material/Rating';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-
-const RatingUI = ({ configuration, value, setValue }) => {
-  return (
-      <Rating
-        value={value}
-        {...configuration}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      />
-  );
-};
+import { reactShinyInput } from 'reactR';
+import RatingUI from './mui_rating.jsx';
+import CheckboxUI from './mui_checkbox.jsx';
+import TransferList from './mui_transferlist.jsx';
+import SkeletonUI from './mui_skeleton.jsx';
 
 reactShinyInput('.mui_rating', 'shinymui.shinymui', RatingUI);
-
-const CheckboxUI = ({ configuration, value, setValue }) => {
-  return (
-
-  <FormControlLabel control={
-  <Checkbox
-        value={value}
-        {...configuration}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      />
-  } label={configuration.label} labelPlacement={configuration.labelPlacement} />
-  );
-};
-
 reactShinyInput('.mui_checkbox', 'shinymui.shinymui', CheckboxUI);
+reactShinyInput('.mui_transferlist', 'shinymui.shinymui', TransferList);
+reactShinyInput('.mui_skeleton', 'shinymui.shinymui', SkeletonUI);
