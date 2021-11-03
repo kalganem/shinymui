@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rating Input — mui_skeleton • shinymui</title>
+<title>Rating Update Input — updateMui_timelineInput • shinymui</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Rating Input — mui_skeleton" />
-<meta property="og:description" content="UI Shiny Input for Rating" />
+<meta property="og:title" content="Rating Update Input — updateMui_timelineInput" />
+<meta property="og:description" content="Updating UI Shiny Input for Rating" />
 
 
 
@@ -108,61 +108,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Rating Input</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kalganem/shinymui/blob/master/R/mui_skeleton.R'><code>R/mui_skeleton.R</code></a></small>
-    <div class="hidden name"><code>mui_skeleton.Rd</code></div>
+    <h1>Rating Update Input</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kalganem/shinymui/blob/master/R/mui_timeline.R'><code>R/mui_timeline.R</code></a></small>
+    <div class="hidden name"><code>updateMui_timelineInput.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>UI Shiny Input for Rating</p>
+    <p>Updating UI Shiny Input for Rating</p>
     </div>
 
-    <pre class="usage"><span class='fu'>mui_skeleton</span><span class='op'>(</span>
-  <span class='va'>inputId</span>,
-  value <span class='op'>=</span> <span class='cn'>NULL</span>,
-  variant <span class='op'>=</span> <span class='st'>"rectangular"</span>,
-  animation <span class='op'>=</span> <span class='st'>"pulse"</span>,
-  <span class='va'>...</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>updateMui_timelineInput</span><span class='op'>(</span><span class='va'>session</span>, <span class='va'>inputId</span>, <span class='va'>value</span>, configuration <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>session</th>
+      <td><p>Shiny session</p></td>
+    </tr>
     <tr>
       <th>inputId</th>
       <td><p>Input id</p></td>
     </tr>
     <tr>
       <th>value</th>
-      <td><p>Default value</p></td>
+      <td><p>Input value</p></td>
     </tr>
     <tr>
-      <th>variant</th>
-      <td><p>shape of skeleton c("text","rectangular", "circular").  default="rectangular"</p></td>
-    </tr>
-    <tr>
-      <th>animation</th>
-      <td><p>The animation. If false the animation effect is disabled. c("pulse", "wave"). default="pulse"</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>other props/arguments</p></td>
+      <th>configuration</th>
+      <td><p>Other arguments/props</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='https://mui.com/api/skeleton/'>Additional arguments/props</a></p></div>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='r-in'></span>
-<span class='r-in'><span class='fu'>mui_skeleton</span><span class='op'>(</span><span class='st'>"sk_1"</span>,variant <span class='op'>=</span> <span class='st'>"rectangular"</span>, height <span class='op'>=</span> <span class='fl'>400</span>, width <span class='op'>=</span> <span class='st'>"100%"</span><span class='op'>)</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;span id="sk_1" class="mui_skeleton"&gt;&lt;/span&gt;</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;script id="sk_1_value" type="application/json"&gt;null&lt;/script&gt;</span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;script id="sk_1_configuration" type="application/json"&gt;{"variant":"rectangular","animation":"pulse","height":400,"width":"100%"}&lt;/script&gt;</span>
-<span class='r-in'></span>
-<span class='r-in'></span>
-</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
