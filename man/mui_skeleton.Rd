@@ -6,7 +6,7 @@
 \usage{
 mui_skeleton(
   inputId,
-  default = NULL,
+  value = NULL,
   variant = "rectangular",
   animation = "pulse",
   ...
@@ -15,7 +15,7 @@ mui_skeleton(
 \arguments{
 \item{inputId}{Input id}
 
-\item{default}{Default value}
+\item{value}{Default value}
 
 \item{variant}{shape of skeleton c("text","rectangular", "circular").  default="rectangular"}
 

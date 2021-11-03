@@ -6,7 +6,7 @@
 #' @importFrom htmltools htmlDependency tags
 #'
 #' @param inputId Input id
-#' @param default Default value
+#' @param value Default value
 #' @param variant shape of skeleton c("text","rectangular", "circular").  default="rectangular"
 #' @param animation The animation. If false the animation effect is disabled. c("pulse", "wave"). default="pulse"
 #' @param ... other props/arguments
@@ -20,7 +20,7 @@
 #'
 #'
 #' @export
-mui_skeleton <- function(inputId, default = NULL, variant = "rectangular", animation = "pulse", ...) {
+mui_skeleton <- function(inputId, value = NULL, variant = "rectangular", animation = "pulse", ...) {
 
   reactR::createReactShinyInput(
     inputId,
@@ -32,7 +32,7 @@ mui_skeleton <- function(inputId, default = NULL, variant = "rectangular", anima
       package = "shinymui",
       script = "shinymui.js"
     ),
-    default = default,
+    default = value,
     list(variant = variant,
          animation = animation,
          ...

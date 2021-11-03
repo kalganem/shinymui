@@ -6,7 +6,7 @@
 #' @importFrom htmltools htmlDependency tags
 #'
 #' @param inputId Input id
-#' @param default Default value (will be the list on the right by default)
+#' @param value Default value (will be the list on the right by default)
 #' @param left_list Values of the list on the left (vector or list) (must be initialized with at least two values)
 #' @param right_list Values of the list on the right (vector or list) (must be initialized with at least two values)
 #' @param left_title The title of the list on the left (default  = "Choices")
@@ -24,7 +24,7 @@
 #'
 #'
 #' @export
-mui_transferList <- function(inputId, default = NULL,
+mui_transferList <- function(inputId, value = NULL,
                              left_list = c("A", "B", "C"),
                              right_list = c("D", "E", "F"),
                              left_title = "Choices",

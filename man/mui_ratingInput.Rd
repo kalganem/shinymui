@@ -6,7 +6,7 @@
 \usage{
 mui_ratingInput(
   inputId,
-  default = NULL,
+  value = NULL,
   size = "small",
   max = 5,
   disabled = FALSE,
@@ -19,7 +19,7 @@ mui_ratingInput(
 \arguments{
 \item{inputId}{Input id}
 
-\item{default}{Default value}
+\item{value}{Default value}
 
 \item{size}{Size of icons c("small", "medium", "large")}
 

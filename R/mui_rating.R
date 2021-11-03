@@ -6,7 +6,7 @@
 #' @importFrom htmltools htmlDependency tags
 #'
 #' @param inputId Input id
-#' @param default Default value
+#' @param value Default value
 #' @param size Size of icons c("small", "medium", "large")
 #' @param max Maximum rating
 #' @param disabled If true, the component is disabled
@@ -23,7 +23,7 @@
 #'
 #'
 #' @export
-mui_ratingInput <- function(inputId, default = NULL, size = "small", max = 5,
+mui_ratingInput <- function(inputId, value = NULL, size = "small", max = 5,
                             disabled = FALSE, highlightSelectedOnly = FALSE,
                             precision = 1, readOnly = FALSE, ...
                             ) {
@@ -38,7 +38,7 @@ mui_ratingInput <- function(inputId, default = NULL, size = "small", max = 5,
       package = "shinymui",
       script = "shinymui.js"
     ),
-    default = default,
+    default = value,
     list(size = size,
          max = max,
          disabled = disabled,

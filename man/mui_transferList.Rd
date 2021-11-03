@@ -6,7 +6,7 @@
 \usage{
 mui_transferList(
   inputId,
-  default = NULL,
+  value = NULL,
   left_list = c("A", "B", "C"),
   right_list = c("D", "E", "F"),
   left_title = "Choices",
@@ -18,7 +18,7 @@ mui_transferList(
 \arguments{
 \item{inputId}{Input id}
 
-\item{default}{Default value (will be the list on the right by default)}
+\item{value}{Default value (will be the list on the right by default)}
 
 \item{left_list}{Values of the list on the left (vector or list) (must be initialized with at least two values)}
 
