@@ -1,8 +1,8 @@
-pandoc: 2.11.2
+pandoc: 2.14.0.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-03T01:43Z
+last_built: 2021-11-04T04:36Z
 urls:
   reference: https://kalganem.github.io/shinymui/index.html/reference
   article: https://kalganem.github.io/shinymui/index.html/articles

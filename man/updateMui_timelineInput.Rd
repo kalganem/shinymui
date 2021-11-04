@@ -2,9 +2,15 @@
 % Please edit documentation in R/mui_timeline.R
 \name{updateMui_timelineInput}
 \alias{updateMui_timelineInput}
-\title{Rating Update Input}
+\title{Timeline Update Input}
 \usage{
-updateMui_timelineInput(session, inputId, value, configuration = NULL)
+updateMui_timelineInput(
+  session,
+  inputId,
+  value = NULL,
+  subvalues = NULL,
+  configuration = NULL
+)
 }
 \arguments{
 \item{session}{Shiny session}
@@ -13,8 +19,10 @@ updateMui_timelineInput(session, inputId, value, configuration = NULL)
 
 \item{value}{Input value}
 
+\item{subvalues}{subtext of each list title}
+
 \item{configuration}{Other arguments/props}
 }
 \description{
-Updating UI Shiny Input for Rating
+Updating UI Shiny Input for Timeline
 }

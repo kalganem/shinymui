@@ -2,12 +2,14 @@
 % Please edit documentation in R/mui_timeline.R
 \name{mui_timelineInput}
 \alias{mui_timelineInput}
-\title{Rating Input}
+\title{Timeline Input}
 \usage{
 mui_timelineInput(
   inputId,
-  value = c("First", "Second", "Third"),
-  position = "right"
+  value = NULL,
+  position = "right",
+  subvalues = NULL,
+  ...
 )
 }
 \arguments{
@@ -16,13 +18,17 @@ mui_timelineInput(
 \item{value}{list of items}
 
 \item{position}{text position c("right", "left", "alternate")}
+
+\item{subvalues}{subtext of each list title}
+
+\item{...}{other options}
 }
 \description{
-UI Shiny Input for Rating
+UI Shiny Input for Timeline
 }
 \examples{
 
-mui_timelineInput("timeline_1", position = "alternate")
+mui_timelineInput("timeline_1", value = c("List 1", "List 2", "List 3"), position = "alternate")
 
 
 

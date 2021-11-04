@@ -19,4 +19,5 @@ BugReports: https://github.com/kalganem/shinymui/issues
 Imports: 
     htmltools,
     reactR,
-    shiny
+    shiny,
+    purrr

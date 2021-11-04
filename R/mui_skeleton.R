@@ -37,7 +37,7 @@ mui_skeleton <- function(inputId, value = NULL, variant = "rectangular", animati
          animation = animation,
          ...
     ),
-    htmltools::tags$span
+    htmltools::tags$div
   )
 }
 
