@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rating Update Input — updateMui_timelineInput • shinymui</title>
+<title>Timeline Update Input — updateMui_timelineInput • shinymui</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Rating Update Input — updateMui_timelineInput" />
-<meta property="og:description" content="Updating UI Shiny Input for Rating" />
+<meta property="og:title" content="Timeline Update Input — updateMui_timelineInput" />
+<meta property="og:description" content="Updating UI Shiny Input for Timeline" />
 
 
 
@@ -108,16 +108,22 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Rating Update Input</h1>
+    <h1>Timeline Update Input</h1>
     <small class="dont-index">Source: <a href='https://github.com/kalganem/shinymui/blob/master/R/mui_timeline.R'><code>R/mui_timeline.R</code></a></small>
     <div class="hidden name"><code>updateMui_timelineInput.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Updating UI Shiny Input for Rating</p>
+    <p>Updating UI Shiny Input for Timeline</p>
     </div>
 
-    <pre class="usage"><span class='fu'>updateMui_timelineInput</span><span class='op'>(</span><span class='va'>session</span>, <span class='va'>inputId</span>, <span class='va'>value</span>, configuration <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>updateMui_timelineInput</span><span class='op'>(</span>
+  <span class='va'>session</span>,
+  <span class='va'>inputId</span>,
+  value <span class='op'>=</span> <span class='cn'>NULL</span>,
+  subvalues <span class='op'>=</span> <span class='cn'>NULL</span>,
+  configuration <span class='op'>=</span> <span class='cn'>NULL</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -133,6 +139,10 @@
     <tr>
       <th>value</th>
       <td><p>Input value</p></td>
+    </tr>
+    <tr>
+      <th>subvalues</th>
+      <td><p>subtext of each list title</p></td>
     </tr>
     <tr>
       <th>configuration</th>
