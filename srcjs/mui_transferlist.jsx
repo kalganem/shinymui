@@ -59,7 +59,7 @@ const TransferList = ({ configuration, value, setValue }) => {
     setRight(right.concat(leftChecked));
     setLeft(not(left, leftChecked));
     setChecked(not(checked, leftChecked));
-    console.log(right.concat(leftChecked));
+
     setValue(right.concat(leftChecked));
 
   };
@@ -68,7 +68,7 @@ const TransferList = ({ configuration, value, setValue }) => {
     setLeft(left.concat(rightChecked));
     setRight(not(right, rightChecked));
     setChecked(not(checked, rightChecked));
-    console.log(not(right, rightChecked));
+
     setValue(not(right, rightChecked));
 
   };
@@ -138,7 +138,7 @@ const TransferList = ({ configuration, value, setValue }) => {
 
   const transfer_buttons = (flag) => {
     if (flag == "row") {
-    console.log(flag);
+
       return(<Grid container direction="column" alignItems="center" >
           <Button
             sx={{ my: 0.5, fontSize: 10, fontWeight: 'bold'  }}
@@ -169,8 +169,8 @@ const TransferList = ({ configuration, value, setValue }) => {
             sx={{ my: 0.5, fontSize: 10, fontWeight: 'bold'  }}
             variant="outlined"
             size="medium"
-            onClick={handleCheckedLeft}
-            disabled={rightChecked.length === 0}
+            onClick={handleCheckedRight}
+            disabled={leftChecked.length === 0}
             aria-label="move selected down"
           >
             &darr;
@@ -180,8 +180,8 @@ const TransferList = ({ configuration, value, setValue }) => {
             sx={{ my: 0.5, fontSize: 10, fontWeight: 'bold'  }}
             variant="outlined"
             size="medium"
-            onClick={handleCheckedRight}
-            disabled={leftChecked.length === 0}
+            onClick={handleCheckedLeft}
+            disabled={rightChecked.length === 0}
             aria-label="move selected up"
           >
             &uarr;

@@ -25,11 +25,16 @@ purrr::map(xx,
 
 add_list <- list(
   title = "Khaled",
-  title_color = "",
   text = "alganem",
-  text_color = "",
   dot_variant = "filled",
   dot_color = "error"
 )
 
-c(Init_list, list(add_list))
+add_list2 <- list(
+  title = "",
+  text = "",
+  dot_variant = "filled",
+  dot_color = "info"
+)
+
+as.data.frame(do.call(rbind, list(add_list, add_list2)))
