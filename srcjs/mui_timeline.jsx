@@ -11,7 +11,6 @@ import Typography from '@mui/material/Typography';
 const TimelineUI = ({ configuration, value, setValue }) => {
 
   const listLength = value.length;
-  console.log(value);
 
   return (
   <Timeline {...configuration}>
@@ -21,13 +20,13 @@ const TimelineUI = ({ configuration, value, setValue }) => {
       return (
             <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot />
+                <TimelineDot color={item.dot_color} variant={item.dot_variant} />
                 </TimelineSeparator>
                  <TimelineContent>
                  <Typography variant="h6" component="span">
                   {item.title}
                  </Typography>
-                 <Typography>{item.text}</Typography>
+                 <Typography >{item.text}</Typography>
                  </TimelineContent>
             </TimelineItem>
           )
@@ -36,14 +35,14 @@ const TimelineUI = ({ configuration, value, setValue }) => {
             return (
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot color={item.dot_color} variant={item.dot_variant} />
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
                 <Typography variant="h6">
                   {item.title}
                  </Typography>
-                 <Typography>{item.text}</Typography>
+                 <Typography >{item.text}</Typography>
                 </TimelineContent>
               </TimelineItem>
           )}

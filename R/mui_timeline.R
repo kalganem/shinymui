@@ -9,6 +9,8 @@
 #' @param value list of items
 #' @param position text position c("right", "left", "alternate")
 #' @param subvalues subtext of each list title
+#' @param dot_variant filled vs outlined
+#' @param dot_color default "grey"
 #' @param ... other options
 #'
 #' @examples
@@ -18,8 +20,12 @@
 #'
 #'
 #' @export
-mui_timelineInput <- function(inputId, value = NULL, position = "right", subvalues = NULL, ...) {
+mui_timelineInput <- function(inputId, value = NULL, subvalues = NULL,
+                              dot_variant="outlined", dot_color = "grey",
+                              position = "right", ...) {
 
+
+  numberOfLists <- max(length(value), length(subvalues))
 
   if(!is.null(value) && length(value) != length(subvalues)) {
     moreTitles <- length(value) - length(subvalues)
@@ -31,7 +37,15 @@ mui_timelineInput <- function(inputId, value = NULL, position = "right", subvalu
     }
   }
 
-  value <- purrr::map(purrr::map2(value, subvalues, list), setNames, c("title", "text"))
+  dot_variant <- expandList(dot_variant, numberOfLists)
+  dot_color <- expandList(dot_color, numberOfLists)
+
+  value <- purrr::map(purrr::pmap(list(value,
+                                  subvalues,
+                                  dot_variant, dot_color), list),
+                      setNames,
+                      c("title", "text",
+                        "dot_variant","dot_color"))
 
   reactR::createReactShinyInput(
     inputId,
@@ -63,22 +77,25 @@ mui_timelineInput <- function(inputId, value = NULL, position = "right", subvalu
 #'
 #' @export
 updateMui_timelineInput <- function(session, inputId, value = NULL, subvalues = NULL,configuration = NULL) {
+   message <- list()
 
-  message <- list()
+  # if (!is.null(value) && !is.null(subvalues)) {
+  #   if(!is.null(value) && length(value) != length(subvalues)) {
+  #     moreTitles <- length(value) - length(subvalues)
+  #     if(moreTitles > 0) {
+  #       subvalues <- c(subvalues, rep("", abs(moreTitles)))
+  #     }
+  #     else {
+  #       value <- c(value, rep("", abs(moreTitles)))
+  #     }
+  #   }
+  #
+  #   value <- purrr::map(purrr::map2(value, subvalues, list), setNames, c("title", "text"))
+  #   message <- list(value = value)
+  # }
 
-  if (!is.null(value) && !is.null(subvalues)) {
-    if(!is.null(value) && length(value) != length(subvalues)) {
-      moreTitles <- length(value) - length(subvalues)
-      if(moreTitles > 0) {
-        subvalues <- c(subvalues, rep("", abs(moreTitles)))
-      }
-      else {
-        value <- c(value, rep("", abs(moreTitles)))
-      }
-    }
-
-    value <- purrr::map(purrr::map2(value, subvalues, list), setNames, c("title", "text"))
-    message <- list(value = value)
+  if (!is.null(value)) {
+    message$value <- value
   }
 
   if (!is.null(configuration)) {
