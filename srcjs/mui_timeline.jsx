@@ -10,7 +10,13 @@ import Typography from '@mui/material/Typography';
 
 const TimelineUI = ({ configuration, value, setValue }) => {
 
-  const listLength = value.length;
+  let listLength;
+
+  if (value == null){
+    listLength = null;
+  } else {
+    listLength = value.length;
+  }
 
   return (
   <Timeline {...configuration}>
