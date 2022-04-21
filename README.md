@@ -12,4 +12,4 @@ Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repost
 
 # [MUI](https://mui.com/ "MUI Webpage") for Shiny
 
-Example app: [Link]("https://kalganem.shinyapps.io/shinymui/")
+Example app: [Link](https://kalganem.shinyapps.io/shinymui/)
