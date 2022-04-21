@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://kalganem.github.io/shinymui/index.html/404.html</loc>
+  </url>
+  <url>
+    <loc>https://kalganem.github.io/shinymui/index.html/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://kalganem.github.io/shinymui/index.html/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://kalganem.github.io/shinymui/index.html/authors.html</loc>
+  </url>
+  <url>
     <loc>https://kalganem.github.io/shinymui/index.html/index.html</loc>
+  </url>
+  <url>
+    <loc>https://kalganem.github.io/shinymui/index.html/reference/index.html</loc>
   </url>
   <url>
     <loc>https://kalganem.github.io/shinymui/index.html/reference/mui_checkboxInput.html</loc>
